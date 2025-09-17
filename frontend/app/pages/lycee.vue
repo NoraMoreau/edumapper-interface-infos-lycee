@@ -1,14 +1,18 @@
 <template>
+<div class="min-h-screen h-full bg-yellow-50">
+  <div>
+    Edumapper
+  </div>
   <!-- LYCEE -->
-  <div class=" bg-blue-100 p-3 border rounded mx-4 mt-4 font-semibold">
+  <div class=" bg-gradient-to-r from-orange-400 to-pink-400 p-3 border rounded mx-4 mt-4 font-semibold">
     {{ selectedLycee }}
     <div class="mt-4 flex items-center justify-between">
-        <button @click="modifierLycee()" class="px-4 py-2 bg-white rounded-full text-sm">Modifier</button>
+        <button @click="modifierLycee()" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm">Modifier</button>
     </div>
   </div>
 
   <!-- CLASSE -->
-  <div class="bg-blue-100 p-3 border rounded mx-4 mt-4">
+  <div class="bg-white p-3 border rounded mx-4 mt-4">
     <div class="flex justify-between items-center font-semibold">
         Classe
         <button @click="showClasse = !showClasse" class="text-sm">À compléter</button>
@@ -17,15 +21,15 @@
     <div v-if="showClasse" class="mt-4 flex gap-2">
       <button 
         @click="selectClasse = 'Seconde'" 
-        :class="selectClasse === 'Seconde' ? 'bg-blue-300' : 'bg-white'" 
+        :class="selectClasse === 'Seconde' ? 'border-black border-4 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Seconde</button>
       <button 
         @click="selectClasse = 'Première'" 
-        :class="selectClasse === 'Première' ? 'bg-blue-300' : 'bg-white'" 
+        :class="selectClasse === 'Première' ? 'border-black border-4 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Première</button>
       <button 
         @click="selectClasse = 'Terminale'" 
-        :class="selectClasse === 'Terminale' ? 'bg-blue-300' : 'bg-white'" 
+        :class="selectClasse === 'Terminale' ? 'border-black border-4 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Terminale</button>
     </div>
 
@@ -33,15 +37,15 @@
     <div v-if="showClasse" class="mt-4 flex gap-2">
       <button 
         @click="selectTypeBac = 'Général'" 
-        :class="selectTypeBac === 'Général' ? 'bg-blue-300' : 'bg-white'" 
+        :class="selectTypeBac === 'Général' ? 'border-black bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Général</button>
       <button 
         @click="selectTypeBac = 'Technologique'" 
-        :class="selectTypeBac === 'Technologique' ? 'bg-blue-300' : 'bg-white'" 
+        :class="selectTypeBac === 'Technologique' ? 'border-black bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Technologique</button>
       <button 
         @click="selectTypeBac = 'Professionel'" 
-        :class="selectTypeBac === 'Professionel' ? 'bg-blue-300' : 'bg-white'" 
+        :class="selectTypeBac === 'Professionel' ? 'border-black bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Professionel</button>
     </div>
 
@@ -56,7 +60,7 @@
   </div>
 
   <!-- SPECIALITE -->
-  <div class="bg-blue-100 p-3 border rounded mx-4 mt-4">
+  <div class="bg-white p-3 border rounded mx-4 mt-4">
     <div class="flex justify-between items-center font-semibold">
         Spécialité
         <button @click="aCompleter()" class="text-sm">À compléter</button>
@@ -64,7 +68,7 @@
   </div>
 
   <!-- NOTES -->
-  <div class="bg-blue-100 p-3 border rounded mx-4 mt-4">
+  <div class="bg-white p-3 border rounded mx-4 mt-4">
     <div class="flex justify-between items-center font-semibold">
         Notes
         <button @click="aCompleter()" class="text-sm">À compléter</button>
@@ -75,6 +79,7 @@
   <div class="fixed bottom-12 left-1/2 transform -translate-x-1/2 font-semibold">
     <button @click="aConfirmer()" class="px-4 py-2 bg-gray-200 rounded-full">Confirmer</button>
   </div>  
+</div>
 </template>
 
 
