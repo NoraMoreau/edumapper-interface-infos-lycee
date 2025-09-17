@@ -105,7 +105,7 @@ onMounted(() => {
     // sinon, on en prend un au hasard
     const random = lycees[Math.floor(Math.random() * lycees.length)];
     selectedLycee.value = random;
-    //localStorage.setItem('selectedLycee', JSON.stringify(random));
+    localStorage.setItem('selectedLycee', JSON.stringify(random));
   }
 })
 
