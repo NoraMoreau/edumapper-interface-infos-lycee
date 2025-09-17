@@ -1,7 +1,6 @@
-# edumapper-interface-infos-lyc-e
+# Edumapper Interface - Informations Lycée
 Test FullStack edumapper ; interface d'enregistrement d'informations sur le lycée d'où vient le futur étudiant
 
-# Edumapper Interface - Informations Lycée
 
 ## Description
 
@@ -15,16 +14,13 @@ Fonctionnalités principales :
 - Sélection de la **classe** (Seconde, Première, Terminale).
 - Sélection du **type de bac** (Général, Technologique, Professionnel).
 
----
 
 ## Structure du projet
-
 
 - **lycee.vue** : Affiche le lycée sélectionné, permet de modifier le lycée et choisir classe + type de bac.
 - **selection-lycee.vue** : Permet de rechercher un lycée par nom et de le sélectionner.
 - **list-lycee.js** : Contient la liste des lycées sous forme de tableau avec `id`, `name`, `ville` et `statut`.
 
----
 
 ## Installation et utilisation
 
@@ -51,10 +47,11 @@ npm run dev
 http://localhost:3000
 ```
 
+
 ## Technologie utilisée
--Vue
--Nuxt
--Tailwind CSS
+- Vue
+- Nuxt
+- Tailwind CSS
 
 
 
