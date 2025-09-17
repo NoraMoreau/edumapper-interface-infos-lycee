@@ -1,0 +1,21 @@
+export const lycees = ref([
+  { id: 1, name: 'Etienne Dolet', ville: 'Paris', statut: 'public' },
+  { id: 2, name: 'Lycée privé Charles de Foucauld', ville: 'Lyon', statut: 'privé' },
+  { id: 3, name: 'Lycée polyvalent Guillaume Tirel', ville: 'Marseille', statut: 'public' },
+  { id: 4, name: "Lycée polyvalent l'Initiative", ville: 'Toulouse', statut: 'public' },
+  { id: 5, name: 'Lycée polyvalent privé Saint Jean de Montmartre', ville: 'Bordeaux', statut: 'privé' },
+  { id: 6, name: 'Lycée privé Pascal', ville: 'Nantes', statut: 'privé' },
+  { id: 7, name: 'Lycée du bâtiment et des travaux publics', ville: 'Montpellier', statut: 'public' },
+  { id: 8, name: 'Lycée polyvalent privé Saint-Nicolas', ville: 'Strasbourg', statut: 'privé' },
+  { id: 9, name: 'Lycée privé La Rochefoucauld', ville: 'Rennes', statut: 'privé' },
+  { id: 10, name: "Lycée technique privé de l'école technique supérieure du laboratoire", ville: 'Grenoble', statut: 'privé' },
+  { id: 11, name: 'Lycée privé Charles Péguy', ville: 'Dijon', statut: 'privé' },
+  { id: 12, name: 'Lycée privé Sainte-Louise', ville: 'Angers', statut: 'privé' },
+  { id: 13, name: "Lycée privé L'Ecole alsacienne", ville: 'Tours', statut: 'privé' },
+  { id: 14, name: 'Lycée polyvalent ESAA-Ecole Boulle', ville: 'Orléans', statut: 'public' },
+  { id: 15, name: 'Lycée polyvalent Paul Poiret', ville: 'Clermont-Ferrand', statut: 'public' },
+  { id: 16, name: 'Lycée Charlemagne', ville: 'Reims', statut: 'public' },
+  { id: 17, name: 'Lycée Claude Monet', ville: 'Le Havre', statut: 'public' },
+  { id: 18, name: 'Lycée privé Lucien de Hirsch', ville: 'Aix-en-Provence', statut: 'privé' },
+  { id: 19, name: 'Lycée privé Saint-Michel de Picpus', ville: 'Nice', statut: 'privé' }
+])

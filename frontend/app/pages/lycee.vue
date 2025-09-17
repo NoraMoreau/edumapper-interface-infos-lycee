@@ -1,11 +1,14 @@
 <template>
 <div class="min-h-screen h-full bg-yellow-50">
-  <div>
-    Edumapper
+  <!-- NOM SITE -->
+  <div class="p-5 font-bold">
+    Edumapper*
   </div>
+
   <!-- LYCEE -->
-  <div class=" bg-gradient-to-r from-orange-400 to-pink-400 p-3 border rounded mx-4 mt-4 font-semibold">
-    {{ selectedLycee }}
+  <div v-if="selectedLycee" class=" bg-gradient-to-r from-orange-400 to-pink-400 p-3 border rounded mx-4 mt-4 font-semibold">
+    <div class="text-lg">{{ selectedLycee.name }}</div>
+    <div class="text-sm opacity-90">{{ selectedLycee.ville }} — {{ selectedLycee.statut }}</div>
     <div class="mt-4 flex items-center justify-between">
         <button @click="modifierLycee()" class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full text-sm">Modifier</button>
     </div>
@@ -53,7 +56,7 @@
         <button 
           class="w-full text-center px-4 py-2 rounded-full" 
           :disabled="!selectClasse || !selectTypeBac"
-          :class="!selectClasse || !selectTypeBac ? 'bg-gray-200 cursor-not-allowed' : 'bg-gray-200 hover:bg-gray-100'">
+          :class="!selectClasse || !selectTypeBac ? 'bg-gray-200 cursor-not-allowed text-gray-600' : 'text-white bg-black transition-all'">
           Confirmer
         </button>
     </div>
@@ -86,28 +89,28 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import { lycees } from "@/src/list-lycee";
 
-const selectedLycee = ref('Lycée Gaston Berger');
+const selectedLycee = ref(null);
 const showClasse = ref(false);
 const selectClasse = ref('');
 const selectTypeBac = ref('');
 
 onMounted(() => {
-  const stored = localStorage.getItem('selectedLycee')
+  const stored = localStorage.getItem('selectedLycee');
   if (stored) {
-    selectedLycee.value = JSON.parse(stored).name
+    // si on a déjà un lycée stocké, on l'utilise
+    selectedLycee.value = JSON.parse(stored);
+  } else {
+    // sinon, on en prend un au hasard
+    const random = lycees[Math.floor(Math.random() * lycees.length)];
+    selectedLycee.value = random;
+    //localStorage.setItem('selectedLycee', JSON.stringify(random));
   }
-});
+})
 
 function modifierLycee() {
     window.location.href = '/selection-lycee';
 }
 
-function aCompleter() {
-    
-}
-
-function aConfirmer() {
-
-}
 </script>
