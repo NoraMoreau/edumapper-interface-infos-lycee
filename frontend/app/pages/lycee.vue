@@ -6,7 +6,7 @@
   </div>
 
   <!-- LYCEE -->
-  <div v-if="selectedLycee" class=" bg-gradient-to-r from-orange-400 to-pink-400 p-3 border rounded mx-4 mt-4 font-semibold">
+  <div v-if="selectedLycee" class=" bg-gradient-to-r from-orange-400 to-pink-400 p-3 rounded mx-4 mt-4 font-semibold">
     <div class="text-lg">{{ selectedLycee.name }}</div>
     <div class="text-sm opacity-90">{{ selectedLycee.ville }} — {{ selectedLycee.statut }}</div>
     <div class="mt-4 flex items-center justify-between">
@@ -15,7 +15,7 @@
   </div>
 
   <!-- CLASSE -->
-  <div class="bg-white p-3 border rounded mx-4 mt-4">
+  <div class="bg-white p-3 rounded mx-4 mt-4">
     <div class="flex justify-between items-center font-semibold">
         Classe
         <button @click="showClasse = !showClasse" class="text-sm">À compléter</button>
@@ -24,15 +24,15 @@
     <div v-if="showClasse" class="mt-4 flex gap-2">
       <button 
         @click="selectClasse = 'Seconde'" 
-        :class="selectClasse === 'Seconde' ? 'border-black border-4 bg-white' : 'bg-gray-100'" 
+        :class="selectClasse === 'Seconde' ? 'border-black border-2 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Seconde</button>
       <button 
         @click="selectClasse = 'Première'" 
-        :class="selectClasse === 'Première' ? 'border-black border-4 bg-white' : 'bg-gray-100'" 
+        :class="selectClasse === 'Première' ? 'border-black border-2 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Première</button>
       <button 
         @click="selectClasse = 'Terminale'" 
-        :class="selectClasse === 'Terminale' ? 'border-black border-4 bg-white' : 'bg-gray-100'" 
+        :class="selectClasse === 'Terminale' ? 'border-black border-2 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Terminale</button>
     </div>
 
@@ -40,15 +40,15 @@
     <div v-if="showClasse" class="mt-4 flex gap-2">
       <button 
         @click="selectTypeBac = 'Général'" 
-        :class="selectTypeBac === 'Général' ? 'border-black bg-white' : 'bg-gray-100'" 
+        :class="selectTypeBac === 'Général' ? 'border-black border-2 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Général</button>
       <button 
         @click="selectTypeBac = 'Technologique'" 
-        :class="selectTypeBac === 'Technologique' ? 'border-black bg-white' : 'bg-gray-100'" 
+        :class="selectTypeBac === 'Technologique' ? 'border-black border-2 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Technologique</button>
       <button 
         @click="selectTypeBac = 'Professionel'" 
-        :class="selectTypeBac === 'Professionel' ? 'border-black bg-white' : 'bg-gray-100'" 
+        :class="selectTypeBac === 'Professionel' ? 'border-black border-2 bg-white' : 'bg-gray-100'" 
         class="px-2 py-1 rounded-full">Professionel</button>
     </div>
 
@@ -63,7 +63,7 @@
   </div>
 
   <!-- SPECIALITE -->
-  <div class="bg-white p-3 border rounded mx-4 mt-4">
+  <div class="bg-white p-3 rounded mx-4 mt-4">
     <div class="flex justify-between items-center font-semibold">
         Spécialité
         <button @click="aCompleter()" class="text-sm">À compléter</button>
@@ -71,7 +71,7 @@
   </div>
 
   <!-- NOTES -->
-  <div class="bg-white p-3 border rounded mx-4 mt-4">
+  <div class="bg-white p-3 rounded mx-4 mt-4">
     <div class="flex justify-between items-center font-semibold">
         Notes
         <button @click="aCompleter()" class="text-sm">À compléter</button>

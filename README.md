@@ -44,7 +44,7 @@ npm run dev
 
 4. Ouvrir le projet dans le navigateur : 
 ```bash
-http://localhost:3000
+http://localhost:3000/lycee
 ```
 
 ## Remarques
