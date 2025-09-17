@@ -47,6 +47,12 @@ npm run dev
 http://localhost:3000
 ```
 
+## Remarques
+
+Le projet n’est pas déployé en production.
+
+Pour tester, il faut suivre les étapes ci-dessus pour lancer le serveur local.
+
 
 ## Technologie utilisée
 - Vue
